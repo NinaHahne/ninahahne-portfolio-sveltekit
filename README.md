@@ -1,13 +1,14 @@
-# Figures SvelteKit Starter
+# ninahahne-portfolio-sveltekit
 
-This is a **SvelteKit starter template** for new projects. It includes:
+This is the **SvelteKit-based portfolio** of [Nina Hahne](https://ninahahne.rocks).  
+It showcases selected projects, experiments, and design work.
 
-- ✅ **SvelteKit** with TypeScript
-- ✅ **TailwindCSS** for styling
-- ✅ **ESLint & Prettier** for code formatting
-- ✅ **Example routing (`/about`)** for structure reference
-- ✅ **Reusable utilities (`src/lib/`)**
-- ✅ **Uses `@sveltejs/adapter-static` for static site generation**
+Built with:
+
+- ✅ **SvelteKit 2** + **Svelte 5**
+- ✅ **TailwindCSS** for layout and responsiveness
+- ✅ **TypeScript**, **ESLint**, and **Prettier** for consistency
+- ✅ **Static site generation** using `@sveltejs/adapter-static`
 
 ## 🚀 Getting Started
 
@@ -27,21 +28,20 @@ Then visit `http://localhost:5173`.
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structure (simplified)
 
 ```
 src/
-├── routes/             # SvelteKit pages
-│   ├── +layout.svelte  # Global layout
-│   ├── +page.svelte    # Homepage
-│   ├── about/          # Example page
-│   │   ├── +page.svelte
-├── lib/                # Shared utilities
-│   ├── stores/         # Global state management
-│   ├── utils/          # Helper functions
-│   ├── types/          # TypeScript types
-├── styles/             # Tailwind styles
-│   ├── app.css
+├── routes/               # Page routes
+│   └── +page.svelte      # Main entry (portfolio homepage)
+├── lib/
+│   ├── components/       # Reusable Svelte components
+│   ├── data/             # Project data as JS/TS files
+│   └── utils/            # Optional helpers
+├── styles/
+│   └── app.css           # Tailwind base & custom styles
+static/
+├── images/               # Project images, icons, etc.
 ```
 
 ---
@@ -69,19 +69,17 @@ npm run lint
 
 By default, this uses **static site generation** (`adapter-static`).
 
-For Netlify:
+This portfolio is statically generated with adapter-static, and can be deployed to:
 
-```bash
-npm install -D @sveltejs/adapter-netlify
-```
-
-Then update `svelte.config.js`.
+- GitHub Pages
+- Netlify / Vercel
+- Any static file host
 
 ---
 
 ## 📷 Image Optimization (WebP, AVIF)
 
-This template supports **automatic image optimization** using `vite-imagetools`. It allows you to convert images to WebP/AVIF at build time.
+This portfolio supports **automatic image optimization** using `vite-imagetools`. It allows you to convert images to WebP/AVIF at build time.
 
 ### Install `vite-imagetools`
 
@@ -114,6 +112,15 @@ export default defineConfig({
 
 ---
 
-## ❓ Questions?
+## 📄 License
 
-This template is designed for **flexibility**. Modify as needed! 🚀
+This project is [MIT licensed](https://opensource.org/license/mit/).  
+All project content © Nina Hahne.
+
+---
+
+## 👋 Contact
+
+Visit: [ninahahne.rocks](https://ninahahne.rocks)  
+GitHub: [@NinaHahne](https://github.com/NinaHahne)  
+Mail: [nina.marie.hahne@gmail.com](mailto:nina.marie.hahne@gmail.com)
