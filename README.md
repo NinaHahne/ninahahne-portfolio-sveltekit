@@ -124,3 +124,9 @@ All project content © Nina Hahne.
 Visit: [ninahahne.rocks](https://ninahahne.rocks)  
 GitHub: [@NinaHahne](https://github.com/NinaHahne)  
 Mail: [nina.marie.hahne@gmail.com](mailto:nina.marie.hahne@gmail.com)
+
+---
+
+## 🎨 Credits
+
+Emoji icons by [OpenMoji](https://openmoji.org), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
