@@ -14,7 +14,9 @@
   <p class="text-sm text-gray-500">
     In the meantime, you can find me on
     <a href="https://github.com/NinaHahne" target="_blank" class="underline hover:text-gray-700">GitHub</a>
+    ,
+    <a href="https://www.linkedin.com/in/ninahahne/" target="_blank" class="underline hover:text-gray-700">LinkedIn</a>
     or
-    <a href="https://www.linkedin.com/in/ninahahne/" target="_blank" class="underline hover:text-gray-700">LinkedIn</a>.
+    <a href="https://ninahahne.rocks" target="_blank" class="underline hover:text-gray-700">ninahahne.rocks</a>.
   </p>
 </section>
