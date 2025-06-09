@@ -8,8 +8,7 @@
   <div class="box max-w-2xl p-5">
     <h1 class="mb-4 text-4xl font-bold">This site is a work in progress 🛠️</h1>
     <p class="text-lg text-gray-700">
-      I’m currently rebuilding my portfolio with SvelteKit, <br class="hidden md:block" />
-      a sprinkle of Tailwind, and lots of love.
+      I’m currently rebuilding my portfolio with SvelteKit & TailwindCSS.
       <br />
       Come back soon for projects, code experiments, and poetic pixels.
     </p>
