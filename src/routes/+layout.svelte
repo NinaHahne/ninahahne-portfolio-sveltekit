@@ -2,6 +2,8 @@
 <script lang="ts">
   import '../styles/app.css';
   import SidebarLeft from '$lib/components/layout/SidebarLeft.svelte';
+  import HeroImage from '$lib/components/HeroImage.svelte';
+  import WindowFrame from '$lib/components/WindowFrame.svelte';
 
   let { children } = $props();
 </script>
@@ -18,7 +20,9 @@
 </header> -->
 
 <main class="relative md:ml-[360px]">
+  <HeroImage />
   <SidebarLeft />
+  <WindowFrame />
   {@render children()}
 </main>
 
