@@ -1,0 +1,113 @@
+<script>
+</script>
+
+<section class="left-sidebar relative left-0 top-0 w-full p-4 md:fixed md:h-full md:min-h-[650px] md:w-[360px]">
+  <div class="sidebar">
+    <div class="profile-info">
+      <div class="window"></div>
+      <h1 class="name">NINA HAHNE</h1>
+      <h2 class="desc">Frontend Engineer</h2>
+      <!-- <hr> -->
+      <h2 class="desc">Web Developer</h2>
+      <span><i class="fas fa-map-marker-alt mr-2" data-fa-transform="grow-3"></i>Berlin, Germany</span>
+    </div>
+    <section class="wheel-wrapper">
+      <div class="wheel">
+        <div class="banner">
+          <div class="panel" style="--n: 0"></div>
+          <div class="panel" style="--n: 1"></div>
+          <div class="panel" style="--n: 2"></div>
+          <div class="panel" style="--n: 3"></div>
+          <div class="panel" style="--n: 4"></div>
+          <div class="panel" style="--n: 5"></div>
+          <div class="panel" style="--n: 6"></div>
+          <div class="panel" style="--n: 7"></div>
+          <div class="panel" style="--n: 8"></div>
+          <div class="panel" style="--n: 9"></div>
+          <div class="panel" style="--n: 10"></div>
+          <div class="panel" style="--n: 11"></div>
+          <!-- <div class="panel" style="--n: 12;"></div> -->
+        </div>
+        <div class="screen"></div>
+      </div>
+    </section>
+    <div class="contact">
+      <a href="mailto:ninamariehahne@gmail.com"
+        ><i class="far fa-envelope" data-fa-transform="grow-2"></i>nina.marie.hahne@gmail.com</a
+      >
+      <a href="https://www.linkedin.com/in/ninahahne/" target="_blank"
+        ><i class="fab fa-linkedin-in"></i>linkedin.com/in/ninahahne</a
+      >
+      <a href="https://github.com/NinaHahne" target="_blank"><i class="fab fa-github-alt"></i>github.com/ninahahne</a>
+      <a href="https://ninahahne.rocks"><i class="fas fa-globe"></i>ninahahne.rocks</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(245, 248, 240, 1);
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 12px;
+  }
+
+  /* Profilbild-Fenster als Maske */
+  .left-sidebar .sidebar {
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    mask-image: radial-gradient(circle at center 142px, transparent 114px, black 115px);
+    -webkit-mask-image: radial-gradient(circle at center 142px, transparent 114px, black 115px);
+  }
+
+  /* Platzhalter für das Profilbild-Loch */
+  .window {
+    position: relative;
+    align-self: center;
+    width: 230px;
+    height: 230px;
+  }
+
+  .profile-info {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .profile-info .name {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .profile-info h2 {
+    color: rgb(96, 92, 91);
+    font-size: 24px;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .profile-info span {
+    display: block;
+    margin: 5px 0px;
+    color: rgb(71, 60, 53);
+  }
+
+  .contact {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact a,
+  .profile-info span {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
