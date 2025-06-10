@@ -32,14 +32,22 @@
       </div>
     </section>
     <div class="contact">
-      <a href="mailto:ninamariehahne@gmail.com"
-        ><i class="far fa-envelope" data-fa-transform="grow-2"></i>nina.marie.hahne@gmail.com</a
-      >
-      <a href="https://www.linkedin.com/in/ninahahne/" target="_blank"
-        ><i class="fab fa-linkedin-in"></i>linkedin.com/in/ninahahne</a
-      >
-      <a href="https://github.com/NinaHahne" target="_blank"><i class="fab fa-github-alt"></i>github.com/ninahahne</a>
-      <a href="https://ninahahne.rocks"><i class="fas fa-globe"></i>ninahahne.rocks</a>
+      <a href="mailto:nina.marie.hahne@gmail.com">
+        <img src="/images/emojis/envelope_openmoji_2709.svg" alt="Email" />
+        <span>nina.marie.hahne@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/ninahahne/" target="_blank">
+        <img src="/images/emojis/linkedin_openmoji_E046.svg" alt="LinkedIn" />
+        <span>linkedin.com/in/ninahahne</span>
+      </a>
+      <a href="https://github.com/NinaHahne" target="_blank">
+        <img src="/images/emojis/github_openmoji_E045.svg" alt="GitHub" />
+        <span>github.com/ninahahne</span>
+      </a>
+      <a href="https://ninahahne.rocks">
+        <img src="/images/emojis/globe_openmoji_1F310.svg" alt="ninahahne.rocks" />
+        <span>ninahahne.rocks</span>
+      </a>
     </div>
   </div>
 </section>
@@ -60,8 +68,8 @@
   .left-sidebar .sidebar {
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
-    mask-image: radial-gradient(circle at center 142px, transparent 114px, black 115px);
-    -webkit-mask-image: radial-gradient(circle at center 142px, transparent 114px, black 115px);
+    mask-image: radial-gradient(circle at center 131px, transparent 114px, black 115px);
+    -webkit-mask-image: radial-gradient(circle at center 131px, transparent 114px, black 115px);
   }
 
   /* Platzhalter für das Profilbild-Loch */
@@ -78,7 +86,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 4px;
   }
 
   .profile-info .name {
@@ -91,7 +99,6 @@
     color: rgb(96, 92, 91);
     font-size: 24px;
     text-align: center;
-    margin: 5px 0;
   }
 
   .profile-info span {
@@ -107,7 +114,19 @@
 
   .contact a,
   .profile-info span {
-    display: block;
-    margin-top: 10px;
+    margin-top: 5px;
+  }
+
+  .contact a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .contact img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
   }
 </style>

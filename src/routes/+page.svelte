@@ -1,4 +1,4 @@
-<!-- Homepage / Landing page / index -->
+<!-- Homepage -->
 
 <svelte:head>
   <title>Nina Hahne | Portfolio</title>

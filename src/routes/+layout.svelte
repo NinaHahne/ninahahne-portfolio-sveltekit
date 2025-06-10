@@ -31,7 +31,7 @@
 >
   <div class="flex items-center px-4 py-2">
     <p class="flex-1 text-left">renderedWithCare</p>
-    <img src="/images/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
+    <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
     <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
   </div>
 </footer>
