@@ -9,7 +9,10 @@
       <h2 class="desc">Frontend Engineer</h2>
       <!-- <hr> -->
       <h2 class="desc">Web Developer</h2>
-      <span><i class="fas fa-map-marker-alt mr-2" data-fa-transform="grow-3"></i>Berlin, Germany</span>
+      <span class="flex items-center justify-center gap-0.5">
+        <img src="/images/emojis/pin_openmoji_E242.svg" alt="location pin icon" class="inline-block h-6" />
+        <span>Berlin, Germany</span>
+      </span>
     </div>
     <section class="wheel-wrapper">
       <div class="wheel">
@@ -33,19 +36,19 @@
     </section>
     <div class="contact">
       <a href="mailto:nina.marie.hahne@gmail.com">
-        <img src="/images/emojis/envelope_openmoji_2709.svg" alt="Email" />
+        <img src="/images/emojis/envelope_openmoji_2709.svg" alt="email icon" />
         <span>nina.marie.hahne@gmail.com</span>
       </a>
       <a href="https://www.linkedin.com/in/ninahahne/" target="_blank">
-        <img src="/images/emojis/linkedin_openmoji_E046.svg" alt="LinkedIn" />
+        <img src="/images/emojis/linkedin_openmoji_E046.svg" alt="LinkedIn icon" />
         <span>linkedin.com/in/ninahahne</span>
       </a>
       <a href="https://github.com/NinaHahne" target="_blank">
-        <img src="/images/emojis/github_openmoji_E045.svg" alt="GitHub" />
+        <img src="/images/emojis/github_openmoji_E045.svg" alt="GitHub icon" />
         <span>github.com/ninahahne</span>
       </a>
       <a href="https://ninahahne.rocks">
-        <img src="/images/emojis/globe_openmoji_1F310.svg" alt="ninahahne.rocks" />
+        <img src="/images/emojis/globe_openmoji_1F310.svg" alt="globe icon" />
         <span>ninahahne.rocks</span>
       </a>
     </div>
@@ -102,7 +105,6 @@
   }
 
   .profile-info span {
-    display: block;
     margin: 5px 0px;
     color: rgb(71, 60, 53);
   }
@@ -126,7 +128,6 @@
 
   .contact img {
     display: inline-block;
-    width: 24px;
     height: 24px;
   }
 </style>
