@@ -6,7 +6,9 @@
 
 <section class="relative flex flex-col items-center justify-center gap-4 px-4 text-center md:min-h-[100dvh] md:pl-0">
   <div class="box max-w-2xl p-5">
-    <h1 class="mb-4 text-4xl font-bold">This site is a work in progress 🛠️</h1>
+    <h1 class="text-4xl font-bold">This site is a work in progress</h1>
+    <img src="/images/emojis/crane_openmoji_1F3D7.svg" alt="crane icon" class="inline-block h-12" />
+    <img src="/images/emojis/barrier_openmoji_1F6A7.svg" alt="barrier icon" class="inline-block h-12" />
     <p class="text-lg text-gray-700">
       I’m currently rebuilding my portfolio with SvelteKit & TailwindCSS.
       <br />
