@@ -4,7 +4,6 @@
   let windowFrame: HTMLButtonElement;
 
   const triggerSurprise = () => {
-    console.log('clicked to trigger surprise');
     // onsurprise?.({ rotating }); // Callback with the current state of 'rotating'
     onsurprise?.();
   };
@@ -25,7 +24,16 @@
 
 <style>
   .window-frame {
-    background-image: linear-gradient(to right, #ff0066, #ff6600, #ffff00, #00ff00, #0000ff, #6600ff);
+    background-image: linear-gradient(
+      to right,
+      #ff0066,
+      #ff0800 5%,
+      #ff6600 10%,
+      #ffea00 45%,
+      #00b900 80%,
+      #0040ff 95%,
+      #6600ff 100%
+    );
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
     mask-image: radial-gradient(circle at center 115px, transparent 113px, black 114px);
