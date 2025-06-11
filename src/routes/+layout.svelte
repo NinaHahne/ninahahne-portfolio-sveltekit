@@ -99,11 +99,11 @@
     {/each}
   </section>
   <HeroImage />
-  <SidebarLeft />
+  <SidebarLeft {scrollProgress} />
   <WindowFrame onsurprise={handleSurprise} />
-  <div class="sticky top-4">
+  <!-- <div class="sticky top-4">
     <WheelBanner {scrollProgress} />
-  </div>
+  </div> -->
   {@render children()}
 </main>
 

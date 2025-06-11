@@ -9,7 +9,6 @@
 
   $effect(() => {
     wheelRotation = -360 * scrollProgress * SPEED + INITIAL_ROTATION; // Calculate rotation
-    console.log('scrollProgress:', scrollProgress, 'wheelRotation:', wheelRotation);
   });
 </script>
 
@@ -33,7 +32,7 @@
     --wheelRotation: -29deg; /* wird in JS gesetzt */
 
     position: relative;
-    height: 120px;
+    height: 180px;
     display: grid;
     place-items: center;
     perspective: 500px;
@@ -41,7 +40,7 @@
     font-size: 52px;
     line-height: 1;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-top: -1rem;
   }
 
   .wheel {
@@ -121,9 +120,10 @@
     /* display: none; */
     position: absolute;
     top: 0;
-    width: 200px;
-    height: 120px;
-    background-color: rgba(245, 248, 240, 0.85);
+    width: 180px;
+    height: 180px;
+    /* background-color: rgba(245, 248, 240, 0.85); */
+    background-image: radial-gradient(circle at center, rgba(245, 248, 240, 0.8) 20%, transparent 60%);
     transform: translate(-50%, -50%);
     border-radius: 50%;
   }

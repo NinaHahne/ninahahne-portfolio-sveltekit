@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+  import WheelBanner from '$lib/components/WheelBanner.svelte';
+  let { scrollProgress = 0 } = $props();
 </script>
 
 <section class="left-sidebar relative left-0 top-0 w-full p-4 md:fixed md:h-full md:min-h-[650px] md:w-[360px]">
@@ -14,16 +16,7 @@
         <span>Berlin, Germany</span>
       </span>
     </div>
-    <section class="wheel-wrapper">
-      <div class="wheel">
-        <div class="banner">
-          {#each Array.from({ length: 12 }, (_, i) => i) as n}
-            <div class="panel" style={`--n: ${n}`}></div>
-          {/each}
-        </div>
-        <div class="screen"></div>
-      </div>
-    </section>
+    <WheelBanner {scrollProgress} />
     <div class="contact">
       <a href="mailto:nina.marie.hahne@gmail.com">
         <img src="/images/emojis/envelope_openmoji_2709.svg" alt="email icon" />
