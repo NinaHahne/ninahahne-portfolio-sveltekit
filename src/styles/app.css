@@ -80,3 +80,41 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-image: linear-gradient(to bottom, powderblue 20%, rgb(117, 198, 22) 60%, rgb(23, 64, 22) 80%);
 }
+
+@keyframes fly-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    /* opacity: 0; */
+  }
+  20% {
+    /* opacity: 1; */
+  }
+  100% {
+    transform: translateY(calc(-100lvh - 6rem)) rotate(720deg);
+    /* opacity: 0; */
+  }
+}
+
+@keyframes rainbow-drop-shadow {
+  0% {
+    filter: drop-shadow(0 0 8px #ff0066);
+  }
+  17% {
+    filter: drop-shadow(0 0 8px #ff0800);
+  }
+  33% {
+    filter: drop-shadow(0 0 8px #ff6600);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #ffea00);
+  }
+  67% {
+    filter: drop-shadow(0 0 8px #00b900);
+  }
+  83% {
+    filter: drop-shadow(0 0 8px #0040ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 8px #6600ff);
+  }
+}

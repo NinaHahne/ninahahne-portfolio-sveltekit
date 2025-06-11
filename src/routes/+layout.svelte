@@ -8,8 +8,15 @@
   let { children } = $props();
 
   // Store a list of currently visible flying surprises:
-  let surpriseEmojis = $state<Array<{ id: number; left: string; duration: number }>>([]);
+  let surpriseEmojis = $state<Array<{ id: number; left: string; duration: number; src: string }>>([]);
   let surpriseId = 0; // Unique ID for each surprise
+
+  const emojiSources = [
+    '/images/emojis/banana_openmoji_1F34C.svg',
+    '/images/emojis/cherry-blossom_openmoji_1F338_mod.svg',
+    '/images/emojis/green-apple_openmoji_1F34F.svg',
+    '/images/emojis/tangerine_openmoji_1F34A.svg',
+  ];
 
   // Callback from WindowFrame with the current state of 'rotating':
   // const handleSurprise = ({ rotating }: { rotating: boolean }) => {
@@ -18,15 +25,15 @@
   const handleSurprise = () => {
     // Called when the surprise button is clicked
     // console.log('🎉 Surprise triggered from WindowFrame!');
-    // TODO: replace this random surprise with a proper one:
 
-    // Create a new ID and random horizontal position (10-90%):
+    // Create a new ID and random horizontal position (5-95%):
     const id = surpriseId++;
-    const left = `${Math.random() * 80 + 10}%`;
+    const left = `${Math.random() * 90 + 5}%`;
     const duration = Math.random() * 2 + 3; // Random duration between 3 and 5 seconds
+    const src = emojiSources[Math.floor(Math.random() * emojiSources.length)]; // Random emoji from the list
 
     // Add new surprise to the array → will be rendered via {#each}
-    surpriseEmojis = [...surpriseEmojis, { id, left, duration }];
+    surpriseEmojis = [...surpriseEmojis, { id, left, duration, src }];
 
     // After the animation ends, remove the item from the array:
     setTimeout(() => {
@@ -48,16 +55,13 @@
 
 <main class="relative md:ml-[360px]">
   <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">
-    {#each surpriseEmojis as surpriseEmoji (surpriseEmoji.id)}
-      <div
-        class="surprise"
-        style="
-        left: {surpriseEmoji.left};
-        animation-duration: {surpriseEmoji.duration}s;
-      "
-      >
-        🌸
-      </div>
+    {#each surpriseEmojis as e (e.id)}
+      <img
+        src={e.src}
+        alt="emoji surprise"
+        class="surprise-emoji pointer-events-none absolute top-full w-16"
+        style="left: {e.left}; animation-duration: {e.duration}s;"
+      />
     {/each}
   </section>
   <HeroImage />
@@ -77,38 +81,12 @@
 </footer>
 
 <style>
-  .surprise {
-    position: absolute;
-    top: 100%;
-    font-size: 2.5rem;
+  .surprise-emoji {
     animation:
       fly-up 1s ease-out forwards,
-      hue-spin 1s linear forwards;
-    text-shadow: 0 0 8px deeppink;
+      rainbow-drop-shadow 1s ease-out forwards;
   }
 
-  @keyframes fly-up {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      /* opacity: 0; */
-    }
-    20% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-110vh) rotate(720deg);
-      /* opacity: 0; */
-    }
-  }
-
-  @keyframes hue-spin {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-    }
-  }
   footer div {
     color: rgb(71, 60, 53);
     background-color: rgba(245, 248, 240, 0.9);
