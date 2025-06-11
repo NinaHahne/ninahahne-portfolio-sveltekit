@@ -1,11 +1,43 @@
 <!-- Global layout for all pages -->
 <script lang="ts">
   import '../styles/app.css';
+  import { onMount, onDestroy } from 'svelte';
   import SidebarLeft from '$lib/components/layout/SidebarLeft.svelte';
   import HeroImage from '$lib/components/HeroImage.svelte';
   import WindowFrame from '$lib/components/WindowFrame.svelte';
+  import WheelBanner from '$lib/components/WheelBanner.svelte';
 
   let { children } = $props();
+
+  // Scroll-Effects:
+  let scrollProgress = $state<number>(0);
+
+  // function getScrollProgress(): number {
+  //   const spacerRect = spacerEl.getBoundingClientRect();
+  //   const spacerHeight = spacerRect.height;
+  //   const windowHeight = window.innerHeight;
+  //   const spacerTop = Math.max(0, -spacerRect.top);
+  //   return Math.min(1, spacerTop / (spacerHeight - windowHeight));
+  // }
+
+  function getScrollProgress(): number {
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
+    const winScrollTop = window.scrollY;
+    return Math.min(1, winScrollTop / (docHeight - winHeight));
+  }
+
+  const updateScroll = () => {
+    scrollProgress = getScrollProgress();
+  };
+
+  onMount(() => {
+    window.addEventListener('scroll', updateScroll);
+    updateScroll();
+    return () => {
+      window.removeEventListener('scroll', updateScroll);
+    };
+  });
 
   // Store a list of currently visible flying surprises:
   let surpriseEmojis = $state<Array<{ id: number; left: string; duration: number; src: string }>>([]);
@@ -54,6 +86,8 @@
 </header> -->
 
 <main class="relative md:ml-[360px]">
+  <!-- Optional scroll area -->
+  <!-- <div bind:this={spacerEl} class="spacer absolute top-0 h-[200vh] w-full bg-orange-400 md:h-full"></div> -->
   <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">
     {#each surpriseEmojis as e (e.id)}
       <img
@@ -67,12 +101,13 @@
   <HeroImage />
   <SidebarLeft />
   <WindowFrame onsurprise={handleSurprise} />
+  <div class="sticky top-4">
+    <WheelBanner {scrollProgress} />
+  </div>
   {@render children()}
 </main>
 
-<footer
-  class="relative z-50 mx-4 mt-4 pb-4 font-mono text-xs sm:text-sm md:fixed md:bottom-0 md:left-[360px] md:right-4 md:m-0"
->
+<footer class="relative z-50 mx-4 mt-4 pb-4 font-mono text-xs sm:text-sm md:ml-[360px]">
   <div class="flex items-center px-4 py-2">
     <p class="flex-1 text-left">renderedWithCare</p>
     <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />

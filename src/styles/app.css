@@ -122,3 +122,11 @@ body::-webkit-scrollbar-thumb {
     filter: drop-shadow(0 0 8px #6600ff);
   }
 }
+
+/* ======= WHEEL ======= */
+
+@keyframes rotate {
+  to {
+    transform: rotateY(-360deg);
+  }
+}
