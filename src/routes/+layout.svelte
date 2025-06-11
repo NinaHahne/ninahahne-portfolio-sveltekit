@@ -89,7 +89,7 @@
 
   footer div {
     color: rgb(71, 60, 53);
-    background-color: rgba(245, 248, 240, 0.9);
+    background-color: rgba(245, 248, 240, 0.8);
     border-radius: 6px;
   }
 </style>

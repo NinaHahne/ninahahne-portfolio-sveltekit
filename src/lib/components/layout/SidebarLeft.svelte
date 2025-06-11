@@ -17,19 +17,9 @@
     <section class="wheel-wrapper">
       <div class="wheel">
         <div class="banner">
-          <div class="panel" style="--n: 0"></div>
-          <div class="panel" style="--n: 1"></div>
-          <div class="panel" style="--n: 2"></div>
-          <div class="panel" style="--n: 3"></div>
-          <div class="panel" style="--n: 4"></div>
-          <div class="panel" style="--n: 5"></div>
-          <div class="panel" style="--n: 6"></div>
-          <div class="panel" style="--n: 7"></div>
-          <div class="panel" style="--n: 8"></div>
-          <div class="panel" style="--n: 9"></div>
-          <div class="panel" style="--n: 10"></div>
-          <div class="panel" style="--n: 11"></div>
-          <!-- <div class="panel" style="--n: 12;"></div> -->
+          {#each Array.from({ length: 12 }, (_, i) => i) as n}
+            <div class="panel" style={`--n: ${n}`}></div>
+          {/each}
         </div>
         <div class="screen"></div>
       </div>
@@ -60,7 +50,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(245, 248, 240, 1);
+    /* background-color: rgba(245, 248, 240, 1); */
+    background-image: linear-gradient(to bottom, rgba(245, 248, 240, 1) 265px, rgba(245, 248, 240, 0.8) 500px);
     width: 100%;
     height: 100%;
     border-radius: 6px;

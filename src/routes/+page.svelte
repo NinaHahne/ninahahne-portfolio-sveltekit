@@ -25,8 +25,7 @@
 
 <style>
   .box {
-    /* background-color: rgba(245, 248, 240, 0.8); */
-    background-color: rgba(245, 248, 240, 0.9);
+    background-color: rgba(245, 248, 240, 0.8);
     border-radius: 6px;
 
     -webkit-transition-duration: 0.4s;

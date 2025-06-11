@@ -81,6 +81,10 @@ body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(to bottom, powderblue 20%, rgb(117, 198, 22) 60%, rgb(23, 64, 22) 80%);
 }
 
+/* ======================= */
+/* = SURPRISE ANIMATIONS = */
+/* ======================= */
+
 @keyframes fly-up {
   0% {
     transform: translateY(0) rotate(0deg);
