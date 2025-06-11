@@ -7,24 +7,30 @@
 
   let { children } = $props();
 
+  // Store a list of currently visible flying surprises:
   let surpriseEmojis = $state<Array<{ id: number; left: string; duration: number }>>([]);
-  let surpriseEmojiId = 0;
+  let surpriseId = 0; // Unique ID for each surprise
 
   // Callback from WindowFrame with the current state of 'rotating':
   // const handleSurprise = ({ rotating }: { rotating: boolean }) => {
   //   console.log('surprise from WindowFrame:', rotating);
   // };
   const handleSurprise = () => {
+    // Called when the surprise button is clicked
     // console.log('🎉 Surprise triggered from WindowFrame!');
     // TODO: replace this random surprise with a proper one:
-    const id = surpriseEmojiId++;
-    const left = `${Math.random() * 80 + 10}%`;
-    const duration = Math.random() * 2 + 3; // zwischen 3-5s
 
+    // Create a new ID and random horizontal position (10-90%):
+    const id = surpriseId++;
+    const left = `${Math.random() * 80 + 10}%`;
+    const duration = Math.random() * 2 + 3; // Random duration between 3 and 5 seconds
+
+    // Add new surprise to the array → will be rendered via {#each}
     surpriseEmojis = [...surpriseEmojis, { id, left, duration }];
 
+    // After the animation ends, remove the item from the array:
     setTimeout(() => {
-      surpriseEmojis = surpriseEmojis.filter((u) => u.id !== id); //
+      surpriseEmojis = surpriseEmojis.filter((u) => u.id !== id);
     }, duration * 1000);
   };
 </script>
@@ -44,7 +50,7 @@
   <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">
     {#each surpriseEmojis as surpriseEmoji (surpriseEmoji.id)}
       <div
-        class="surpriseEmoji"
+        class="surprise"
         style="
         left: {surpriseEmoji.left};
         animation-duration: {surpriseEmoji.duration}s;
@@ -71,7 +77,7 @@
 </footer>
 
 <style>
-  .surpriseEmoji {
+  .surprise {
     position: absolute;
     top: 100%;
     font-size: 2.5rem;
