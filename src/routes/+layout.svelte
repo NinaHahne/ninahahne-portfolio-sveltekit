@@ -45,7 +45,7 @@
 
   const emojiSources = [
     '/images/emojis/banana_openmoji_1F34C.svg',
-    '/images/emojis/cherry-blossom_openmoji_1F338_mod.svg',
+    '/images/emojis/cherry-blossom_openmoji_1F338-mod.svg',
     '/images/emojis/green-apple_openmoji_1F34F.svg',
     '/images/emojis/tangerine_openmoji_1F34A.svg',
   ];
