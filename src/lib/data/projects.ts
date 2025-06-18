@@ -25,7 +25,7 @@ export const projects: Project[] = [
       'Intuitive drag & drop interface for creating visual clues',
       "Real-time sync: all players see the builder's actions live",
     ],
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js/Express', 'PostgreSQL', 'AWS', 'Socket.IO'],
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Socket.IO'],
     githubUrl: 'https://github.com/NinaHahne/the-pond',
     liveUrl: {
       href: 'https://www.allthatstuff.fun/',
