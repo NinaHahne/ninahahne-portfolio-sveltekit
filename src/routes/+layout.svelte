@@ -85,7 +85,7 @@
   </nav>
 </header> -->
 
-<main class="relative md:ml-[360px]">
+<main class="relative mx-4 md:ml-[360px]">
   <!-- Optional scroll area -->
   <!-- <div bind:this={spacerEl} class="spacer absolute top-0 h-[200vh] w-full bg-orange-400 md:h-full"></div> -->
   <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">

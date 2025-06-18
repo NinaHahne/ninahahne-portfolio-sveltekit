@@ -25,7 +25,7 @@
 <style>
   .window-frame {
     background-image: linear-gradient(
-      to right,
+      to top,
       #ff0066,
       #ff0800 5%,
       #ff6600 10%,

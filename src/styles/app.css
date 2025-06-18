@@ -41,19 +41,15 @@ h6 {
 
 h3 {
   font-size: 22px;
-  margin-bottom: 6px;
 }
 
 h4 {
   font-size: 18px;
   font-weight: normal;
-  margin-bottom: 6px;
 }
 
 h5 {
   font-size: 16px;
-  margin-top: 4px;
-  margin-bottom: 6px;
 }
 
 /* Links */
@@ -77,8 +73,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-image: linear-gradient(to bottom, powderblue 20%, rgb(117, 198, 22) 60%, rgb(23, 64, 22) 80%);
+  border-radius: 4px;
+  /* background-image: linear-gradient(to bottom, powderblue 20%, rgb(117, 198, 22) 60%, rgb(23, 64, 22) 80%); */
+  background-image: linear-gradient(to top, #ff0066, #ff0800, #ff6600, #ffea00, #00b900, #0040ff, #6600ff);
 }
 
 /* ======================= */

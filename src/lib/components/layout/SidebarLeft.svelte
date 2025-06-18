@@ -3,7 +3,7 @@
   let { scrollProgress = 0 } = $props();
 </script>
 
-<section class="left-sidebar relative left-0 top-0 w-full p-4 md:fixed md:h-full md:min-h-[650px] md:w-[360px]">
+<section class="left-sidebar relative left-0 top-0 w-full py-4 md:fixed md:h-full md:min-h-[650px] md:w-[360px] md:p-4">
   <div class="sidebar">
     <div class="profile-info">
       <div class="window"></div>
@@ -12,25 +12,25 @@
       <!-- <hr> -->
       <h2 class="desc">Web Developer</h2>
       <span class="flex items-center justify-center gap-0.5">
-        <img src="/images/emojis/pin_openmoji_E242.svg" alt="location pin icon" class="inline-block h-6" />
+        <img src="/images/emojis/pin_openmoji_E242_mod.svg" alt="location pin icon" class="inline-block h-6" />
         <span>Berlin, Germany</span>
       </span>
     </div>
     <WheelBanner {scrollProgress} />
     <div class="contact">
-      <a href="mailto:nina.marie.hahne@gmail.com">
+      <a href="mailto:nina.marie.hahne@gmail.com" class="flex items-center gap-1">
         <img src="/images/emojis/envelope_openmoji_2709.svg" alt="email icon" />
         <span>nina.marie.hahne@gmail.com</span>
       </a>
-      <a href="https://www.linkedin.com/in/ninahahne/" target="_blank">
+      <a href="https://www.linkedin.com/in/ninahahne/" target="_blank" class="flex items-center gap-1">
         <img src="/images/emojis/linkedin_openmoji_E046.svg" alt="LinkedIn icon" />
         <span>linkedin.com/in/ninahahne</span>
       </a>
-      <a href="https://github.com/NinaHahne" target="_blank">
-        <img src="/images/emojis/github_openmoji_E045.svg" alt="GitHub icon" />
+      <a href="https://github.com/NinaHahne" target="_blank" class="flex items-center gap-1">
+        <img src="/images/emojis/github_openmoji_E045_mod.svg" alt="GitHub icon" />
         <span>github.com/ninahahne</span>
       </a>
-      <a href="https://ninahahne.rocks">
+      <a href="https://ninahahne.rocks" class="flex items-center gap-1">
         <img src="/images/emojis/globe_openmoji_1F310.svg" alt="globe icon" />
         <span>ninahahne.rocks</span>
       </a>
@@ -107,7 +107,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
   }
 
   .contact img {

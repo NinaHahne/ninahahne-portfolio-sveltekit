@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="emoji" inkscape:version="1.4 (86a8ad7, 2024-10-11)" sodipodi:docname="pin_openmoji_E242_mod.svg" version="1.1" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview bordercolor="#000000" borderopacity="0.25" inkscape:current-layer="emoji" inkscape:cx="35.954023" inkscape:cy="36" inkscape:deskcolor="#d1d1d1" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" inkscape:window-height="1001" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="2379" inkscape:window-y="567" inkscape:zoom="10.875" pagecolor="#ffffff"/>
+ <g id="color">
+  <circle cx="35.987" cy="25.495" r="10.38" display="none" fill="#fff"/>
+  <path d="m36 65.021s-3.091-5.9737-13.872-26.892c-2.1278-4.1286-4.8172-7.7062-4.8172-12.524 0-10.321 8.3671-18.688 18.688-18.688v8.0285s-10.458 0.5199-10.458 10.397 10.459 10.756 10.459 10.756z" fill="#d0cfce"/>
+  <path d="m35.974 65.017s2.998-6.0172 13.872-26.892c2.0634-3.9611 4.8173-7.7062 4.8173-12.524 0-10.321-8.3671-18.688-18.688-18.688l-0.2836 8.0321s11.177 0.2666 11.008 10.735-11.009 10.418-11.009 10.418z" fill="#d0cfce"/>
+  <path d="m36.828 7.5469s9.7494 4.0365 11.838 15.286c2.0391 10.98-9.1666 30.167-12.167 39.833-2.498 8.0491 11.777-21.342 16.624-31.403 1.1796-2.4485 1.6107-5.1986 1.1483-7.8768-1.0513-6.0888-4.7163-16.024-17.444-15.84z" fill="#9b9b9a"/>
+ </g>
+ <g id="line" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+  <circle cx="36.001" cy="25.521" r="10.577"/>
+  <path d="m36 65.021s-3.091-5.9737-13.872-26.892c-2.1278-4.1286-4.8172-7.7062-4.8172-12.524 0-10.321 8.3671-18.688 18.688-18.688"/>
+  <path d="m36.002 65.017s2.998-6.0172 13.872-26.892c2.0634-3.9611 4.8173-7.7062 4.8173-12.524 0-10.321-8.3671-18.688-18.688-18.688"/>
+ </g>
+</svg>
