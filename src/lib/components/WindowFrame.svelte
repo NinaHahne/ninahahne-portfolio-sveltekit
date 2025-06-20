@@ -13,7 +13,7 @@
   bind:this={windowFrame}
   class="window-frame absolute left-1/2 top-8 z-10 h-[230px] w-[230px] -translate-x-1/2 rounded-full transition-transform duration-1000 hover:cursor-pointer md:fixed md:left-[65px] md:translate-x-0"
   class:rotating
-  class:rotate-[360deg]={rotating}
+  class:hoverable:hover:rotate-[360deg]={rotating}
   onmouseover={() => (rotating = true)}
   onfocus={() => (rotating = true)}
   onmouseout={() => (rotating = false)}
