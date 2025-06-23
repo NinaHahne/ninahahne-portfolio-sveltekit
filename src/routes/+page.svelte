@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section class="relative mb-4 flex flex-col items-center justify-center gap-4 text-center md:min-h-[100dvh]">
-  <div class="box bg-bg-light-gray-80 max-w-2xl rounded-md p-5">
+  <div class="box max-w-2xl rounded-md bg-light-gray-80 p-5">
     <h1 class="text-4xl font-bold">This site is a work in progress</h1>
     <img src="/images/emojis/crane_openmoji_1F3D7.svg" alt="crane icon" class="inline-block h-12" />
     <img src="/images/emojis/barrier_openmoji_1F6A7.svg" alt="barrier icon" class="inline-block h-12" />
