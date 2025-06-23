@@ -1,39 +1,38 @@
 <script lang="ts">
-  let rotating = $state<boolean>(false);
+  let rotated = $state<boolean>(false);
   let { onsurprise } = $props();
   let windowFrame: HTMLButtonElement;
 
   const triggerSurprise = () => {
-    // onsurprise?.({ rotating }); // Callback with the current state of 'rotating'
+    // onsurprise?.({ rotated }); // Callback with the current state of 'rotated'
     onsurprise?.();
   };
 </script>
 
 <button
+  tabindex="0"
   bind:this={windowFrame}
-  class="window-frame absolute left-1/2 top-8 z-10 h-[230px] w-[230px] -translate-x-1/2 rounded-full transition-transform duration-1000 hover:cursor-pointer md:fixed md:left-[65px] md:translate-x-0"
-  class:rotating
-  class:hoverable:hover:rotate-[360deg]={rotating}
-  onmouseover={() => (rotating = true)}
-  onfocus={() => (rotating = true)}
-  onmouseout={() => (rotating = false)}
-  onblur={() => (rotating = false)}
+  class="group absolute left-1/2 top-8 z-10 h-[230px] w-[230px] -translate-x-1/2 rounded-full text-transparent focus-visible:outline-offset-[4px] hoverable:text-stone hoverable:hover:text-transparent md:fixed md:left-[65px] md:translate-x-0"
   aria-label="click for a surprise"
   onclick={triggerSurprise}
-></button>
+>
+  <!-- <div class="pointer-events-none relative h-full w-full bg-current transition-colors duration-300"></div> -->
+  <div
+    class="window-frame pointer-events-none relative h-full w-full rounded-full bg-rainbow-gradient-curved transition-transform duration-300 group-active:scale-[1.02]"
+  ></div>
+  <!-- 
+    class:rotated
+    class:hoverable:hover:rotate-[360deg]={rotated}
+    onmouseover={() => (rotated = true)}
+    onmouseout={() => (rotated = false)}
+    onmousedown={() => (rotated = true)}
+    onmouseup={() => (rotated = false)}
+    onfocus={() => (rotated = true)}
+    onblur={() => (rotated = false)} -->
+</button>
 
 <style>
   .window-frame {
-    background-image: linear-gradient(
-      to top,
-      #ff0066,
-      #ff0800 5%,
-      #ff6600 10%,
-      #ffea00 45%,
-      #00b900 80%,
-      #0040ff 95%,
-      #6600ff 100%
-    );
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
     mask-image: radial-gradient(circle at center 115px, transparent 113px, black 114px);

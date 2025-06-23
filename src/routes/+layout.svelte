@@ -50,9 +50,9 @@
     '/images/emojis/tangerine_openmoji_1F34A.svg',
   ];
 
-  // Callback from WindowFrame with the current state of 'rotating':
-  // const handleSurprise = ({ rotating }: { rotating: boolean }) => {
-  //   console.log('surprise from WindowFrame:', rotating);
+  // Callback from WindowFrame with the current state of 'rotated':
+  // const handleSurprise = ({ rotated }: { rotated: boolean }) => {
+  //   console.log('surprise from WindowFrame:', rotated);
   // };
   const handleSurprise = () => {
     // Called when the surprise button is clicked
@@ -108,7 +108,7 @@
 </main>
 
 <footer class="relative z-50 mx-4 mt-4 pb-4 font-mono text-xs sm:text-sm md:ml-[360px]">
-  <div class="flex items-center px-4 py-2">
+  <div class="bg-light-gray-80 flex items-center rounded-md px-4 py-2 text-dusty-brown">
     <p class="flex-1 text-left">renderedWithCare</p>
     <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
     <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
@@ -120,11 +120,5 @@
     animation:
       fly-up 1s ease-out forwards,
       rainbow-drop-shadow 1s ease-out forwards;
-  }
-
-  footer div {
-    color: rgb(71, 60, 53);
-    background-color: rgba(245, 248, 240, 0.8);
-    border-radius: 6px;
   }
 </style>

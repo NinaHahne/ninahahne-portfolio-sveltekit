@@ -4,11 +4,11 @@
 </script>
 
 <section class="projects-section relative flex flex-col gap-4">
-  <div class="portfolio sticky top-4 rounded-md p-4">
+  <div class="portfolio bg-light-gray-80 sticky top-4 rounded-md p-4">
     <h1 class="text-center text-3xl font-bold">PORTFOLIO</h1>
   </div>
   {#each projects as project}
-    <div class="project flex flex-col gap-4 rounded-md p-4">
+    <div class="project bg-light-gray-80 flex flex-col gap-4 rounded-md p-4">
       <div class="wrapper flex flex-col gap-4 md:flex-row">
         <div class="first-box text-center md:flex-1 md:text-left">
           <div class="img-box flex items-center justify-center">
@@ -20,7 +20,7 @@
           {/if}
         </div>
 
-        <hr class="h-px border-t border-solid md:hidden" />
+        <hr class="h-px border-t border-solid border-stone md:hidden" />
 
         <div class="second-box md:flex-1">
           <div class="project-info">
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <hr class="h-px border-t border-solid" />
+      <hr class="h-px border-t border-solid border-stone" />
       <div class="project-links flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
         <a
           class="github flex gap-1 whitespace-nowrap font-bold transition-colors duration-300"
@@ -54,7 +54,7 @@
         </a>
         {#if project.liveUrl}
           <a
-            class="btn live flex items-center gap-1 whitespace-nowrap rounded-md px-2 py-1 font-bold transition-colors duration-300"
+            class="btn live hoverable:hover:text-btn-text-active flex items-center gap-1 whitespace-nowrap rounded-md border-2 border-stone px-2 py-1 font-bold transition-colors duration-300 hoverable:hover:bg-stone"
             href={project.liveUrl.href}
             target="_blank"
           >
@@ -73,15 +73,14 @@
 </section>
 
 <style>
-  .portfolio,
+  /* .portfolio,
   .project {
-    background-color: rgba(245, 248, 240, 0.8);
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  } */
 
-  .img-box img {
-    /* max-width: 640px; */
-  }
+  /* .img-box img {
+    max-width: 640px;
+  } */
 
   h4 {
     color: #555;
@@ -99,16 +98,8 @@
     list-style: disc;
   }
 
-  .btn {
-    border: 2px solid rgb(96, 92, 91);
-  }
-
   .github:hover {
     color: #333;
-  }
-
-  hr {
-    border-color: rgb(96, 92, 91);
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -125,10 +116,6 @@
     .img-box.effect:hover {
       transform: translateY(-2px);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    }
-    .btn.live:hover {
-      background-color: rgb(96, 92, 91);
-      color: rgb(245, 248, 240);
     }
 
     .img-box.effect:active,

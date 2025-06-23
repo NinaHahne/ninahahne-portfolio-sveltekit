@@ -8,10 +8,10 @@
     <div class="profile-info">
       <div class="window"></div>
       <h1 class="name">NINA HAHNE</h1>
-      <h2 class="desc">Frontend Engineer</h2>
+      <h2 class="desc text-stone">Frontend Engineer</h2>
       <!-- <hr> -->
-      <h2 class="desc">Web Developer</h2>
-      <span class="flex items-center justify-center gap-0.5">
+      <h2 class="desc text-stone">Web Developer</h2>
+      <span class="flex items-center justify-center gap-0.5 text-dusty-brown">
         <img src="/images/emojis/pin_openmoji_E242_mod.svg" alt="location pin icon" class="inline-block h-6" />
         <span>Berlin, Germany</span>
       </span>
@@ -44,7 +44,7 @@
     flex-direction: column;
     justify-content: space-between;
     /* background-color: rgba(245, 248, 240, 1); */
-    background-image: linear-gradient(to bottom, rgba(245, 248, 240, 1) 265px, rgba(245, 248, 240, 0.8) 500px);
+    background-image: linear-gradient(to bottom, var(--color-light-gray) 265px, var(--color-light-gray-80) 500px);
     width: 100%;
     height: 100%;
     border-radius: 6px;
@@ -83,14 +83,12 @@
   }
 
   .profile-info h2 {
-    color: rgb(96, 92, 91);
     font-size: 24px;
     text-align: center;
   }
 
   .profile-info span {
     margin: 5px 0px;
-    color: rgb(71, 60, 53);
   }
 
   .contact {

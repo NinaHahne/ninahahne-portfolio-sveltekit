@@ -16,7 +16,7 @@
   <div class="wheel">
     <div class="banner">
       {#each Array.from({ length: panelCount }, (_, n) => n) as n}
-        <div class="panel" style={`--n: ${n}`}></div>
+        <div class="panel text-dusty-brown" style={`--n: ${n}`}></div>
       {/each}
     </div>
     <div class="screen"></div>
@@ -63,7 +63,6 @@
     font-size: inherit;
     height: 1em;
     overflow: hidden;
-    color: rgb(71, 60, 53);
     /* Rainbow */
     /* color: hsl(var(--hue), 75%, 75%); */
 
@@ -123,7 +122,7 @@
     width: 180px;
     height: 180px;
     /* background-color: rgba(245, 248, 240, 0.85); */
-    background-image: radial-gradient(circle at center, rgba(245, 248, 240, 0.8) 20%, transparent 60%);
+    background-image: radial-gradient(circle at center, var(--color-light-gray-80) 20%, transparent 60%);
     transform: translate(-50%, -50%);
     border-radius: 50%;
   }
