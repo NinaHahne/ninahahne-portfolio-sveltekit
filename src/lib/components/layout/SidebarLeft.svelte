@@ -3,8 +3,10 @@
   let { scrollProgress = 0 } = $props();
 </script>
 
-<section class="left-sidebar relative left-0 top-0 w-full py-4 md:fixed md:h-full md:min-h-[650px] md:w-[360px] md:p-4">
-  <div class="sidebar">
+<section
+  class="left-sidebar relative left-0 top-0 flex min-h-screen w-full flex-col justify-between py-4 md:fixed md:h-lvh md:w-[360px] md:p-4"
+>
+  <div class="sidebar h-full flex-grow-[1] md:overflow-auto">
     <div class="profile-info">
       <div class="window"></div>
       <h1 class="name">NINA HAHNE</h1>

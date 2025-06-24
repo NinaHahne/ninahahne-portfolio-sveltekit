@@ -12,7 +12,7 @@
   });
 </script>
 
-<section class="wheel-wrapper" bind:this={wheelWrapper} style={`--wheelRotation: ${wheelRotation}deg`}>
+<section class="wheel-wrapper flex-shrink-0" bind:this={wheelWrapper} style={`--wheelRotation: ${wheelRotation}deg`}>
   <div class="wheel">
     <div class="banner">
       {#each Array.from({ length: panelCount }, (_, n) => n) as n}
@@ -32,7 +32,7 @@
     --wheelRotation: -29deg; /* wird in JS gesetzt */
 
     position: relative;
-    height: 180px;
+    height: 120px;
     display: grid;
     place-items: center;
     perspective: 500px;

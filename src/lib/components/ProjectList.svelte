@@ -4,12 +4,12 @@
 </script>
 
 <section class="projects-section relative flex flex-col gap-4">
-  <div class="portfolio bg-light-gray-80 sticky top-4 rounded-md p-4">
+  <div class="portfolio sticky top-4 rounded-md bg-light-gray-80 p-4">
     <h1 class="text-center text-3xl font-bold">PORTFOLIO</h1>
   </div>
   {#each projects as project}
-    <div class="project bg-light-gray-80 flex flex-col gap-4 rounded-md p-4">
-      <div class="wrapper flex flex-col gap-4 md:flex-row">
+    <div class="project flex flex-col gap-4 rounded-md bg-light-gray-80 p-4">
+      <div class="wrapper flex flex-col gap-4 lg:flex-row">
         <div class="first-box text-center md:flex-1 md:text-left">
           <div class="img-box flex items-center justify-center">
             <img src={project.image} alt={`${project.title} preview`} class="w-full rounded-md" />
@@ -54,7 +54,7 @@
         </a>
         {#if project.liveUrl}
           <a
-            class="btn live hoverable:hover:text-btn-text-active flex items-center gap-1 whitespace-nowrap rounded-md border-2 border-stone px-2 py-1 font-bold transition-colors duration-300 hoverable:hover:bg-stone"
+            class="btn live flex items-center gap-1 whitespace-nowrap rounded-md border-2 border-stone px-2 py-1 font-bold transition-colors duration-300 hoverable:hover:bg-stone hoverable:hover:text-btn-text-active"
             href={project.liveUrl.href}
             target="_blank"
           >

@@ -12,20 +12,26 @@
   // Scroll-Effects:
   let scrollProgress = $state<number>(0);
 
-  // function getScrollProgress(): number {
-  //   const spacerRect = spacerEl.getBoundingClientRect();
-  //   const spacerHeight = spacerRect.height;
-  //   const windowHeight = window.innerHeight;
-  //   const spacerTop = Math.max(0, -spacerRect.top);
-  //   return Math.min(1, spacerTop / (spacerHeight - windowHeight));
-  // }
+  let spacerEl: HTMLElement;
 
+  // Calculate scroll progress between 0 and 1
+
+  // based on progress of spacer element:
   function getScrollProgress(): number {
-    const docHeight = document.documentElement.scrollHeight;
-    const winHeight = window.innerHeight;
-    const winScrollTop = window.scrollY;
-    return Math.min(1, winScrollTop / (docHeight - winHeight));
+    const spacerRect = spacerEl.getBoundingClientRect();
+    const spacerHeight = spacerRect.height;
+    const windowHeight = window.innerHeight;
+    const spacerTop = Math.max(0, -spacerRect.top);
+    return Math.min(1, spacerTop / (spacerHeight - windowHeight));
   }
+
+  // based on progress of window:
+  // function getScrollProgress(): number {
+  //   const docHeight = document.documentElement.scrollHeight;
+  //   const winHeight = window.innerHeight;
+  //   const winScrollTop = window.scrollY;
+  //   return Math.min(1, winScrollTop / (docHeight - winHeight));
+  // }
 
   const updateScroll = () => {
     scrollProgress = getScrollProgress();
@@ -78,42 +84,44 @@
   <title>Nina Hahne | Portfolio</title>
 </svelte:head>
 
-<!-- <header class="fixed top-0 z-50 flex h-16 w-full justify-between bg-slate-100 p-4">
-  <nav class="relative flex h-full items-center justify-center gap-4">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-  </nav>
-</header> -->
-
-<main class="relative mx-4 md:ml-[360px]">
+<div class="relative">
   <!-- Optional scroll area -->
-  <!-- <div bind:this={spacerEl} class="spacer absolute top-0 h-[200vh] w-full bg-orange-400 md:h-full"></div> -->
-  <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">
-    {#each surpriseEmojis as e (e.id)}
-      <img
-        src={e.src}
-        alt="emoji surprise"
-        class="surprise-emoji pointer-events-none absolute top-full w-16"
-        style="left: {e.left}; animation-duration: {e.duration}s;"
-      />
-    {/each}
-  </section>
-  <HeroImage />
-  <SidebarLeft {scrollProgress} />
-  <WindowFrame onsurprise={handleSurprise} />
-  <!-- <div class="sticky top-4">
-    <WheelBanner {scrollProgress} />
-  </div> -->
-  {@render children()}
-</main>
+  <div bind:this={spacerEl} class="spacer absolute top-0 h-[calc(100lvh_+_500px)] w-full md:h-full"></div>
+  <!-- <header class="fixed top-0 z-50 flex h-16 w-full justify-between bg-slate-100 p-4">
+    <nav class="relative flex h-full items-center justify-center gap-4">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+  </header> -->
 
-<footer class="relative z-50 mx-4 mt-4 pb-4 font-mono text-xs sm:text-sm md:ml-[360px]">
-  <div class="bg-light-gray-80 flex items-center rounded-md px-4 py-2 text-dusty-brown">
-    <p class="flex-1 text-left">renderedWithCare</p>
-    <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
-    <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
-  </div>
-</footer>
+  <main class="relative mx-4 md:ml-[360px]">
+    <section id="effects" class="pointer-events-none fixed left-0 top-0 h-lvh w-full overflow-hidden">
+      {#each surpriseEmojis as e (e.id)}
+        <img
+          src={e.src}
+          alt="emoji surprise"
+          class="surprise-emoji pointer-events-none absolute top-full w-16"
+          style="left: {e.left}; animation-duration: {e.duration}s;"
+        />
+      {/each}
+    </section>
+    <HeroImage />
+    <SidebarLeft {scrollProgress} />
+    <WindowFrame onsurprise={handleSurprise} />
+    <!-- <div class="sticky top-4">
+      <WheelBanner {scrollProgress} />
+    </div> -->
+    {@render children()}
+  </main>
+
+  <footer class="relative z-50 mx-4 mt-4 pb-4 text-xs sm:text-sm md:ml-[360px]">
+    <div class="flex items-center rounded-md bg-light-gray-80 px-4 py-2 text-dusty-brown">
+      <p class="flex-1 text-left">renderedWithCare</p>
+      <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
+      <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
+    </div>
+  </footer>
+</div>
 
 <style>
   .surprise-emoji {
