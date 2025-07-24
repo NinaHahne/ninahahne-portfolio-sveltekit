@@ -2,13 +2,15 @@
 
 <script lang="ts">
   import ProjectList from '$lib/components/ProjectList.svelte';
+
+  let current = $state<'projects' | 'experiments'>('projects');
 </script>
 
 <svelte:head>
   <title>Nina Hahne | Portfolio</title>
 </svelte:head>
 
-<section class="relative mb-4 flex flex-col items-center justify-center gap-4 text-center md:min-h-[100dvh]">
+<!-- <section class="relative mb-4 flex flex-col items-center justify-center gap-4 text-center md:min-h-[100dvh]">
   <div class="box max-w-2xl rounded-md bg-light-gray-80 p-5">
     <h1 class="text-4xl font-bold">This site is a work in progress</h1>
     <img src="/images/emojis/crane_openmoji_1F3D7.svg" alt="crane icon" class="inline-block h-12" />
@@ -25,7 +27,7 @@
       <a href="https://ninahahne.rocks" target="_blank" class="underline">ninahahne.rocks</a>.
     </p>
   </div>
-</section>
+</section> -->
 
 <ProjectList />
 

@@ -1,14 +1,32 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition';
+  import SegmentTabs from '$lib/components/SegmentTabs.svelte';
   import { projects } from '$lib/data/projects';
   import type { Project } from '$lib/data/projects';
+
+  // lokaler Tab-State
+  let current = $state<'projects' | 'experiments'>('projects');
+
+  // sichtbare Items ableiten
+  const visible = $derived(projects.filter((p) => p.kind === (current === 'projects' ? 'project' : 'experiment')));
 </script>
 
-<section class="projects-section relative flex flex-col gap-4">
-  <div class="portfolio sticky top-4 rounded-md bg-light-gray-80 p-4">
+<section class="projects-section relative flex flex-col gap-4 md:pt-4">
+  <!-- <div class="portfolio sticky top-4 rounded-md bg-light-gray-80 p-4">
     <h1 class="text-center text-3xl font-bold">PORTFOLIO</h1>
+  </div> -->
+  <div
+    class="portfolio sticky top-4 z-10 flex flex-col items-center
+         gap-2 rounded-md bg-light-gray-80 p-4
+         md:flex-row md:justify-between"
+  >
+    <h1 class="text-3xl font-bold md:text-left">PORTFOLIO</h1>
+
+    <!-- Umschalt-Buttons -->
+    <SegmentTabs bind:selected={current} />
   </div>
-  {#each projects as project}
-    <div class="project flex flex-col gap-4 rounded-md bg-light-gray-80 p-4">
+  {#each visible as project (project.id)}
+    <div transition:fade={{ duration: 250 }} class="project flex flex-col gap-4 rounded-md bg-light-gray-80 p-4">
       <div class="wrapper flex flex-col gap-4 lg:flex-row">
         <div class="first-box text-center md:flex-1 md:text-left">
           <div class="img-box flex items-center justify-center">
