@@ -84,7 +84,7 @@
   <title>Nina Hahne | Portfolio</title>
 </svelte:head>
 
-<div class="relative flex h-full flex-col justify-between">
+<div class="relative">
   <!-- Optional scroll area -->
   <div bind:this={spacerEl} class="spacer absolute top-0 h-[calc(100lvh_+_500px)] w-full md:h-full"></div>
   <!-- <header class="fixed top-0 z-50 flex h-16 w-full justify-between bg-slate-100 p-4">

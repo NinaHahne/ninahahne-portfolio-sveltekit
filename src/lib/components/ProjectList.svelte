@@ -17,20 +17,17 @@
   </div> -->
   <div
     class="portfolio sticky top-4 z-10 flex flex-col items-center
-         gap-2 rounded-md bg-light-gray-80 p-4
-         md:flex-row md:justify-between"
+         gap-2 rounded-md bg-light-gray-80
+         "
   >
-    <h1 class="text-3xl font-bold md:text-left">PORTFOLIO</h1>
-
-    <!-- Umschalt-Buttons -->
     <SegmentTabs bind:selected={current} />
   </div>
   {#each visible as project (project.id)}
     <div transition:fade={{ duration: 250 }} class="project flex flex-col gap-4 rounded-md bg-light-gray-80 p-4">
       <div class="wrapper flex flex-col gap-4 lg:flex-row">
         <div class="first-box text-center md:flex-1 md:text-left">
-          <div class="img-box flex items-center justify-center">
-            <img src={project.image} alt={`${project.title} preview`} class="w-full rounded-md" />
+          <div class="img-box flex items-center justify-center overflow-hidden rounded-md border-2 border-dusty-brown">
+            <img src={project.image} alt={`${project.title} preview`} class="w-full" />
           </div>
           <h3 class="mt-2 text-center">{project.title}</h3>
           {#if project.subtitle}
