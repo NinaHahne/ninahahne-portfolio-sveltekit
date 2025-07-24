@@ -24,7 +24,7 @@ export const projects: Project[] = [
     technologies: ['D3.js', 'React 19'],
     githubUrl: 'https://github.com/NinaHahne/flowchart-poc',
     liveUrl: {
-      href: 'https://github.com/NinaHahne/flowchart-poc',
+      href: 'https://ninahahne.github.io/flowchart-poc/',
       label: 'Try now',
     },
     kind: 'experiment',
