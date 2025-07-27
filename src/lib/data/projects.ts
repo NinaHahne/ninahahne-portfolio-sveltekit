@@ -36,7 +36,7 @@ export const projects: Project[] = [
     technologies: ['D3.js'],
     githubUrl: 'https://github.com/NinaHahne/swing-rhythm-viz',
     liveUrl: {
-      href: 'https://ninahahne.github.io/flowchart-poc/',
+      href: 'https://ninahahne.github.io/swing-rhythm-viz/',
       label: 'Try now',
     },
     kind: 'experiment',
