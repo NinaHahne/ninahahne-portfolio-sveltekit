@@ -57,16 +57,16 @@
   .left-sidebar .sidebar {
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
-    mask-image: radial-gradient(circle at center 131px, transparent 114px, black 115px);
-    -webkit-mask-image: radial-gradient(circle at center 131px, transparent 114px, black 115px);
+    mask-image: radial-gradient(circle at center 126px, transparent 109px, black 110px);
+    -webkit-mask-image: radial-gradient(circle at center 126px, transparent 109px, black 110px);
   }
 
   /* Platzhalter für das Profilbild-Loch */
   .window {
     position: relative;
     align-self: center;
-    width: 230px;
-    height: 230px;
+    width: 220px;
+    height: 220px;
   }
 
   .profile-info {

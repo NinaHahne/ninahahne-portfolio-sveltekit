@@ -12,7 +12,7 @@
 <button
   tabindex="0"
   bind:this={windowFrame}
-  class="group absolute left-1/2 top-8 z-10 h-[230px] w-[230px] -translate-x-1/2 rounded-full text-transparent focus-visible:outline-offset-[4px] hoverable:text-stone hoverable:hover:text-transparent md:fixed md:left-[65px] md:translate-x-0"
+  class="group absolute left-1/2 top-8 z-10 h-[220px] w-[220px] -translate-x-1/2 rounded-full text-transparent focus-visible:outline-offset-[4px] hoverable:text-stone hoverable:hover:text-transparent md:fixed md:left-[70px] md:translate-x-0"
   aria-label="click for a surprise"
   onclick={triggerSurprise}
 >
@@ -35,7 +35,7 @@
   .window-frame {
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
-    mask-image: radial-gradient(circle at center 115px, transparent 113px, black 114px);
-    -webkit-mask-image: radial-gradient(circle at center 115px, transparent 113px, black 114px);
+    mask-image: radial-gradient(circle at center 110px, transparent 108px, black 109px);
+    -webkit-mask-image: radial-gradient(circle at center 110px, transparent 108px, black 109px);
   }
 </style>
