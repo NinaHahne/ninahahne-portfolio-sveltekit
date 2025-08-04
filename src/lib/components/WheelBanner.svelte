@@ -13,7 +13,7 @@
 </script>
 
 <section
-  class="wheel-wrapper h-[120px] flex-shrink-0 md:h-[90px]"
+  class="wheel-wrapper h-[120px] flex-shrink-0 md:h-[10dvh] md:min-h-[70px]"
   bind:this={wheelWrapper}
   style={`--wheelRotation: ${wheelRotation}deg`}
 >
