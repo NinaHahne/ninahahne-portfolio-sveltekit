@@ -82,6 +82,18 @@
 
 <svelte:head>
   <title>Nina Hahne | Portfolio</title>
+  <meta property="og:title" content="Nina Hahne | Portfolio" />
+  <meta
+    name="description"
+    content="Nina Hahne's Portfolio - Showcasing bootcamp apps, personal projects and experiments"
+  />
+  <meta property="og:image" content="/images/social-preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ninahahne.rocks" />
+  <!-- Optional (für X, Discord, Threads etc.) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/images/social-preview.jpg" />
+  <link rel="canonical" href="https://ninahahne.rocks" />
 </svelte:head>
 
 <div class="relative">
