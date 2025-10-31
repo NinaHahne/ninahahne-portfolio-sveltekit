@@ -16,7 +16,30 @@ export type Project = {
   kind: 'project' | 'experiment';
 };
 
+// non-breaking space: \u00A0
+// soft hyphen: \u00AD
+// non-breaking hyphen: \u2011
+
 export const projects: Project[] = [
+  {
+    id: 'tanja-shiatsu',
+    title: 'Shiatsu-Praxis Tanja Schochow',
+    subtitle: 'Bilingual website for a Shiatsu practitioner',
+    image: '/images/projects/tanja-shiatsu.webp',
+    description:
+      'A calm and thoughtfully simple website for Shiatsu practitioner Tanja Schochow. It reflects the mindful and balanced nature of Shiatsu through a clean layout, soft colors, and responsive design. Built as the foundation for a future version powered by a headless CMS.',
+    features: ['Two-language setup (German / English)', 'Accessibility and SEO-friendly meta setup'],
+    technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS', 'YAML\u00A0/\u00A0sveltekit\u2011i18n'],
+    githubUrl: 'https://github.com/NinaHahne/tanja-shiatsu',
+    liveUrl: {
+      href: 'https://tanja-shiatsu.de/',
+      label: 'Visit website',
+      iconBefore: '/images/emojis/herb_openmoji_1F33F.svg',
+      iconAfter: '/images/emojis/massage_openmoji_1F486.svg',
+      // iconAfter: '/images/emojis/hands_openmoji_1F450.svg',
+    },
+    kind: 'project',
+  },
   {
     id: 'flowchart-poc',
     title: 'Flowchart PoC',

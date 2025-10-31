@@ -38,6 +38,12 @@
         <hr class="h-px border-t border-solid border-stone md:hidden" />
 
         <div class="second-box md:flex-1">
+          {#if project.description}
+            <div class="description">
+              <h5>Description</h5>
+              <p class="mb-4">{project.description}</p>
+            </div>
+          {/if}
           <div class="project-info">
             {#if project.features}
               <div class="features">
