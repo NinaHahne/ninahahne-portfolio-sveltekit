@@ -96,7 +96,7 @@
   <link rel="canonical" href="https://ninahahne.rocks" />
 </svelte:head>
 
-<div class="relative">
+<div class="relative min-h-dvh">
   <!-- Optional scroll area -->
   <div bind:this={spacerEl} class="spacer absolute top-0 h-[calc(100lvh_+_500px)] w-full md:h-full"></div>
   <!-- <header class="fixed top-0 z-50 flex h-16 w-full justify-between bg-slate-100 p-4">
@@ -126,11 +126,42 @@
     {@render children()}
   </main>
 
-  <footer class="relative z-50 mx-4 mt-4 pb-4 text-xs sm:text-sm md:ml-[360px]">
+  <!-- <footer class="relative z-50 mx-4 mt-4 pb-4 text-xs sm:text-sm md:ml-[360px]">
     <div class="flex items-center rounded-md bg-light-gray-80 px-4 py-2 text-dusty-brown">
       <p class="flex-1 text-left">renderedWithCare</p>
       <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
       <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
+    </div>
+  </footer> -->
+
+  <!-- <footer class="relative z-50 mx-4 mt-4 pb-4 text-xs sm:text-sm md:ml-[360px]">
+    <div class="flex items-center rounded-md bg-light-gray-80 px-4 py-2 text-dusty-brown">
+      <p class="flex-1 text-left">renderedWithCare</p>
+      <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
+      <p class="flex-1 text-right">&copy; 2025 Nina Hahne</p>
+    </div>
+
+    <div class="mt-1 flex justify-center gap-4 text-[0.7rem] text-dusty-brown/70 underline">
+      <a href="/imprint" class="hover:text-dusty-brown">Imprint</a>
+      <a href="/privacy" class="hover:text-dusty-brown">Privacy</a>
+    </div>
+  </footer> -->
+
+  <footer class="relative z-50 mx-4 mt-4 pb-4 text-xs sm:text-sm md:ml-[360px]">
+    <div
+      class="flex flex-wrap items-center justify-between gap-2 rounded-md bg-light-gray-80 px-4 py-2 text-dusty-brown"
+    >
+      <p class="flex-1 text-left">renderedWithCare</p>
+      <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
+      <div class="flex flex-1 justify-end gap-3 text-xs">
+        <a href="/imprint" class="hidden underline hover:text-stone md:block">Imprint</a>
+        <a href="/privacy" class="hidden underline hover:text-stone md:block">Privacy</a>
+        <span>&copy; 2025 Nina Hahne</span>
+      </div>
+    </div>
+    <div class="mt-4 flex justify-center gap-4 text-[0.7rem] text-dusty-brown/70 underline md:hidden">
+      <a href="/imprint" class="hover:text-dusty-brown">Imprint</a>
+      <a href="/privacy" class="hover:text-dusty-brown">Privacy</a>
     </div>
   </footer>
 </div>

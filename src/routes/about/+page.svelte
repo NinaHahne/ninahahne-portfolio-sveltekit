@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>About Us | Figures SvelteKit Starter</title>
+  <title>About Us | SvelteKit Starter</title>
 </svelte:head>
 
 <section class="relative flex min-h-[100dvh] flex-col items-center gap-4 pt-24">
