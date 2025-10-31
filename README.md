@@ -42,6 +42,7 @@ src/
 │   └── app.css           # Tailwind base & custom styles
 static/
 ├── images/               # Project images, icons, etc.
+└── fonts/                # Optional fonts
 ```
 
 ---

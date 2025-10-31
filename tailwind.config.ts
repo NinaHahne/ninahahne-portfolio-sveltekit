@@ -8,6 +8,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         // custom colors:
         sage: 'rgb(138 144 133)',

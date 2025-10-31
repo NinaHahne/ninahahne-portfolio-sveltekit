@@ -1,3 +1,4 @@
+@import './fonts.css';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -48,7 +49,7 @@ body {
 }
 
 body {
-  font-family: 'Montserrat', 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   background-color: var(--color-sage);
   -webkit-font-smoothing: antialiased;

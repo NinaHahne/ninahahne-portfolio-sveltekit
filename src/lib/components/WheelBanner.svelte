@@ -43,7 +43,7 @@
     perspective-origin: 50% calc(50% - 90px);
     font-size: 52px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 700;
     margin-top: -1rem;
   }
 

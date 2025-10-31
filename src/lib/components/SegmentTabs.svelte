@@ -5,7 +5,7 @@
 <div class="bg-light-gray-60 flex w-full flex-wrap items-center justify-center gap-4 p-4 xl:gap-8">
   <div class="order-2 flex-1 text-left lg:order-none xl:text-right">
     <button
-      class="relative rounded-md border-2 border-dusty-brown px-4 py-1 text-sm font-semibold text-dusty-brown transition-colors duration-300 hoverable:hover:bg-dusty-brown hoverable:hover:text-light-gray"
+      class="relative rounded-md border-2 border-dusty-brown px-4 py-1 text-sm font-bold text-dusty-brown transition-colors duration-300 hoverable:hover:bg-dusty-brown hoverable:hover:text-light-gray"
       class:bg-dusty-brown={selected === 'projects'}
       class:text-light-gray={selected === 'projects'}
       onclick={() => (selected = 'projects')}
@@ -20,7 +20,7 @@
 
   <div class="order-3 flex-1 text-right lg:order-none xl:text-left">
     <button
-      class="relative rounded-md border-2 border-dusty-brown px-4 py-1 text-sm font-semibold text-dusty-brown transition-colors duration-300 hoverable:hover:bg-dusty-brown hoverable:hover:text-light-gray"
+      class="relative rounded-md border-2 border-dusty-brown px-4 py-1 text-sm font-bold text-dusty-brown transition-colors duration-300 hoverable:hover:bg-dusty-brown hoverable:hover:text-light-gray"
       class:bg-dusty-brown={selected === 'experiments'}
       class:text-light-gray={selected === 'experiments'}
       onclick={() => (selected = 'experiments')}
