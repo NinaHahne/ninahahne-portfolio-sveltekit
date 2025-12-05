@@ -22,7 +22,7 @@
     </p>
 
     <h2 class="mt-6 text-xl font-bold">Kontakt</h2>
-    <p>E-Mail: <a href="mailto:{contact.email}" class="underline hover:text-stone">{contact.email}</a></p>
+    <p>E-Mail: <a href="mailto:{contact.email}" class="underline">{contact.email}</a></p>
 
     <h2 class="mt-6 text-xl font-bold">Verantwortlich für den Inhalt</h2>
     <p>
@@ -42,7 +42,7 @@
     </p>
 
     <h2 class="mt-6 text-xl font-bold">Contact</h2>
-    <p>E-mail: <a href="mailto:{contact.email}" class="underline hover:text-stone">{contact.email}</a></p>
+    <p>E-mail: <a href="mailto:{contact.email}" class="underline">{contact.email}</a></p>
 
     <h2 class="mt-6 text-xl font-bold">Responsible for Content</h2>
     <p>Responsible according to § 18 (2) MStV: Nina Hahne (address as above)</p>
@@ -52,7 +52,7 @@
     <h1 class="mb-4 text-2xl font-bold">Credits</h1>
     <p>
       Portrait / Logo illustration by
-      <a href="http://pfluegner.net/" target="_blank" rel="noopener" class="underline hover:text-stone">
+      <a href="https://www.instagram.com/monsieurlefitz/" target="_blank" rel="noopener" class="underline">
         Matthias Pflügner
       </a>.
     </p>
