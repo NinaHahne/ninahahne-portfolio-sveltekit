@@ -22,12 +22,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'singing-me-happy',
+    kind: 'project',
+    title: 'Singing Me Happy – Jazzchor Berlin',
+    subtitle: 'Website relaunch for a Berlin-based jazz choir',
+    image: '/images/projects/singing-me-happy.webp',
+    description:
+      'A complete redesign and rebuild of the choir’s outdated Readymag website. The new version runs on SvelteKit with clean architecture, improved accessibility, and a lightweight structure that will be extended with CMS functionality. Includes audio and video embeds, responsive layouts, and an elegant visual identity that reflects the choir’s warm personality.',
+    features: [
+      'Migration from Readymag to SvelteKit',
+      'Custom audio & video components',
+      'Responsive layout & improved accessibility',
+      'SEO-friendly meta setup',
+      'Prepared for future headless CMS integration',
+    ],
+    technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
+    githubUrl: 'https://github.com/NinaHahne/singingmehappy',
+    liveUrl: {
+      href: 'https://singingmehappy.de/',
+      label: 'Visit website',
+      iconBefore: '/images/emojis/musical-notes_openmoji_1F3B6.svg',
+      iconAfter: '/images/emojis/musical-note_openmoji_1F3B5.svg',
+    },
+  },
+  {
     id: 'tanja-shiatsu',
     title: 'Shiatsu-Praxis Tanja Schochow',
     subtitle: 'Bilingual website for a Shiatsu practitioner',
     image: '/images/projects/tanja-shiatsu.webp',
     description:
-      'A calm and thoughtfully simple website for Shiatsu practitioner Tanja Schochow. It reflects the mindful and balanced nature of Shiatsu through a clean layout, soft colors, and responsive design. Built as the foundation for a future version powered by a headless CMS.',
+      'A calm and thoughtfully simple website for Shiatsu practitioner Tanja Schochow. It reflects the mindful and balanced nature of Shiatsu through a clean layout, soft colors, and responsive design. Built deliberately minimal — almost like a digital business card — to form a focused foundation for a future version powered by a headless CMS.',
     features: ['Two-language setup (German / English)', 'Accessibility and SEO-friendly meta setup'],
     technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS', 'YAML\u00A0/\u00A0sveltekit\u2011i18n'],
     githubUrl: 'https://github.com/NinaHahne/tanja-shiatsu',
