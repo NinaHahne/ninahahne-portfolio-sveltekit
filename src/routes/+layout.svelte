@@ -154,14 +154,14 @@
       <p class="flex-1 text-left">renderedWithCare</p>
       <img src="/images/emojis/turtle_openmoji_1F422.svg" alt="Turtle Icon" class="h-5 w-5 flex-none text-center" />
       <div class="flex flex-1 justify-end gap-3 text-xs">
-        <a href="/imprint" class="hidden underline hover:text-stone md:block">Imprint</a>
-        <a href="/privacy" class="hidden underline hover:text-stone md:block">Privacy</a>
+        <a href="/imprint" class="hidden underline md:block">Imprint</a>
+        <a href="/privacy" class="hidden underline md:block">Privacy</a>
         <span>&copy; 2025 Nina Hahne</span>
       </div>
     </div>
     <div class="mt-4 flex justify-center gap-4 text-[0.7rem] text-dusty-brown/70 underline md:hidden">
-      <a href="/imprint" class="hover:text-dusty-brown">Imprint</a>
-      <a href="/privacy" class="hover:text-dusty-brown">Privacy</a>
+      <a href="/imprint" class="">Imprint</a>
+      <a href="/privacy" class="">Privacy</a>
     </div>
   </footer>
 </div>
