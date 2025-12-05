@@ -46,5 +46,15 @@
 
     <h2 class="mt-6 text-xl font-bold">Responsible for Content</h2>
     <p>Responsible according to § 18 (2) MStV: Nina Hahne (address as above)</p>
+
+    <hr class="my-6 border-t border-dusty-brown/30" />
+
+    <h1 class="mb-4 text-2xl font-bold">Credits</h1>
+    <p>
+      Portrait / Logo illustration by
+      <a href="http://pfluegner.net/" target="_blank" rel="noopener" class="underline hover:text-stone">
+        Matthias Pflügner
+      </a>.
+    </p>
   </section>
 </section>
