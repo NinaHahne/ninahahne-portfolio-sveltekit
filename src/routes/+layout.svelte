@@ -1,11 +1,11 @@
 <!-- Global layout for all pages -->
 <script lang="ts">
   import '../styles/app.css';
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
   import SidebarLeft from '$lib/components/layout/SidebarLeft.svelte';
   import HeroImage from '$lib/components/HeroImage.svelte';
   import WindowFrame from '$lib/components/WindowFrame.svelte';
-  import WheelBanner from '$lib/components/WheelBanner.svelte';
+  // import WheelBanner from '$lib/components/WheelBanner.svelte';
 
   let { children } = $props();
 
@@ -156,7 +156,7 @@
       <div class="flex flex-1 justify-end gap-3 text-xs">
         <a href="/imprint" class="hidden underline md:block">Imprint</a>
         <a href="/privacy" class="hidden underline md:block">Privacy</a>
-        <span>&copy; 2025 Nina Hahne</span>
+        <span>&copy; 2026 Nina Hahne</span>
       </div>
     </div>
     <div class="mt-4 flex justify-center gap-4 text-[0.7rem] text-dusty-brown/70 underline md:hidden">

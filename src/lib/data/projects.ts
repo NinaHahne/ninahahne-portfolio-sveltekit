@@ -22,6 +22,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'jakob-franken',
+    kind: 'project',
+    title: 'Jakob Franken – Blues guitarist',
+    subtitle: 'Minimal artist website for a Berlin-based musician',
+    image: '/images/projects/jakob-franken.webp',
+    description:
+      'A clean and focused website for blues guitarist Jakob Franken. The site presents his new album, upcoming concerts, and essential links in a straightforward layout inspired by classic musician websites. Built with SvelteKit and TailwindCSS, it prioritizes performance, accessibility, and maintainability while keeping the visual identity simple and expressive.',
+    features: [
+      'Album section with Bandcamp integration',
+      'Concert listing prepared for CMS-based updates',
+      'Reusable SVG icon components for streaming and social platforms',
+      'Responsive layout optimized for both mobile and desktop',
+      'Lightweight structure with minimal dependencies',
+    ],
+    technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
+    githubUrl: 'https://github.com/NinaHahne/jakobfranken',
+    liveUrl: {
+      href: 'https://jakobfranken.com/',
+      label: 'Visit website',
+      iconBefore: '/images/emojis/guitar_openmoji_1F3B8.svg',
+      iconAfter: '/images/emojis/musical-notes_openmoji_1F3B6.svg',
+    },
+  },
+  {
     id: 'singing-me-happy',
     kind: 'project',
     title: 'Singing Me Happy – Jazzchor Berlin',

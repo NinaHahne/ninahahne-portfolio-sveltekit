@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   import SegmentTabs from '$lib/components/SegmentTabs.svelte';
   import { projects } from '$lib/data/projects';
-  import type { Project } from '$lib/data/projects';
+  // import type { Project } from '$lib/data/projects';
 
   // lokaler Tab-State
   let current = $state<'projects' | 'experiments'>('projects');
@@ -124,25 +124,25 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .img-box.effect {
+    /* .img-box.effect {
       cursor: pointer;
       transition:
         transform 0.2s ease-in-out,
         box-shadow 0.2s ease-in-out;
-    }
+    } */
     .btn.live {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     }
 
-    .img-box.effect:hover {
+    /* .img-box.effect:hover {
       transform: translateY(-2px);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    }
+    } */
 
-    .img-box.effect:active,
+    /* .img-box.effect:active,
     .btn.live:active {
       transform: translateY(2px);
       box-shadow: none;
-    }
+    } */
   }
 </style>
