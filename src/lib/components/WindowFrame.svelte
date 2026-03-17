@@ -1,5 +1,5 @@
 <script lang="ts">
-  let rotated = $state<boolean>(false);
+  // let rotated = $state<boolean>(false);
   let { onsurprise } = $props();
   let windowFrame: HTMLButtonElement;
 

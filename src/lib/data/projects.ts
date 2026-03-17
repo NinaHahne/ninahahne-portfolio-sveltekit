@@ -25,18 +25,19 @@ export const projects: Project[] = [
     id: 'jakob-franken',
     kind: 'project',
     title: 'Jakob Franken – Blues guitarist',
-    subtitle: 'Minimal artist website for a Berlin-based musician',
+    subtitle: 'Minimal artist website with headless CMS integration',
     image: '/images/projects/jakob-franken.webp',
     description:
-      'A clean and focused website for blues guitarist Jakob Franken. The site presents his new album, upcoming concerts, and essential links in a straightforward layout inspired by classic musician websites. Built with SvelteKit and TailwindCSS, it prioritizes performance, accessibility, and maintainability while keeping the visual identity simple and expressive.',
+      'A clean and focused website for blues guitarist Jakob Franken. The site presents his album, concerts, and essential links in a straightforward layout inspired by classic musician websites. Built with SvelteKit and TailwindCSS, it combines a minimal, expressive design with a scalable content setup powered by Sanity. The concert section is fully CMS-driven, allowing non-technical updates, with the rest of the content gradually being migrated to the same system.',
     features: [
       'Album section with Bandcamp integration',
-      'Concert listing prepared for CMS-based updates',
+      'Concert listing powered by Sanity CMS (real-time updates without rebuild)',
+      'Headless CMS architecture prepared for full content management',
       'Reusable SVG icon components for streaming and social platforms',
       'Responsive layout optimized for both mobile and desktop',
       'Lightweight structure with minimal dependencies',
     ],
-    technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
+    technologies: ['SvelteKit', 'TypeScript', 'TailwindCSS', 'Sanity'],
     githubUrl: 'https://github.com/NinaHahne/jakobfranken',
     liveUrl: {
       href: 'https://jakobfranken.com/',
