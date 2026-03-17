@@ -54,6 +54,10 @@
     '/images/emojis/cherry-blossom_openmoji_1F338-mod.svg',
     '/images/emojis/green-apple_openmoji_1F34F.svg',
     '/images/emojis/tangerine_openmoji_1F34A.svg',
+    '/images/emojis/herb_openmoji_1F33F.svg',
+    '/images/emojis/musical-note_openmoji_1F3B5.svg',
+    '/images/emojis/musical-notes_openmoji_1F3B6.svg',
+    '/images/emojis/guitar_openmoji_1F3B8.svg',
   ];
 
   // Callback from WindowFrame with the current state of 'rotated':
